@@ -1,0 +1,13 @@
+<%- include("./components/header") %>
+<a href="/" class="card-link">Go back</a>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title"><%= result.title %> </h5>
+            <p class="card-subtitle mb-2 text-muted"><%= result.article %></p>
+            <a href="/edit/article<%= result.id %> " class="card-link">Edit</a>
+            <a href="/delete/article/<%= result.id %> " class="card-link">Delete</a>
+        </div>
+    </div>
+
+<%- include("./components/footer") %> 

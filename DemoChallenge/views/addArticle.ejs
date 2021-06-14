@@ -1,0 +1,22 @@
+<%- include("./components/header") %>
+<a class="nav-link" href="/">Go back</a>
+
+<form method="POST" action="/new/article">
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input name="title" type="text" class="form-control">
+      <% if(error&& error.title ){ %> 
+      <h4 style="color: red;"><%= error.title.message %> </h4>
+    <% } %>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Article</label>
+      <textarea name="article" rows="4" class="form-control"></textarea>
+      <% if(error && error.article){ %> 
+      <h4 style="color: red;"><%= error.article.message %> </h4>
+      <% } %>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<%- include("./components/footer") %> 

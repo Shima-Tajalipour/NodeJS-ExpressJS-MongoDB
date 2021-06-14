@@ -1,0 +1,16 @@
+<%- include("./components/header") %>
+<a class="nav-link" href="/">Go back</a>
+
+<form method="POST" action="/edit/article<%= result.id %> ">
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input name="title" value="<%= result.title %> " type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Article</label>
+      <input name="article" value="<%= result.article %> " rows="4" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<%- include("./components/footer") %> 
